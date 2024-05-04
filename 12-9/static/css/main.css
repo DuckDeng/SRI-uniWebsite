@@ -9,7 +9,7 @@ a {
 }
 
 #banner {
-	background: url('https://www.todaybing.com/api/today/cn');
+	background: url('https://bing.img.run/1920x1080.php');
 	background-size: cover;
 	background-position: center;
 	width: 100%;
