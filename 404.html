@@ -1,152 +1,86 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-CN">
+<html lang="zh-CN">
 
 <head>
-  <meta charset="utf-8">
-  <title>404-找不到页面</title>
-  <link rel="stylesheet" href="/404.css" />
-  <link rel="preconnect" href="https://use.sevencdn.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://use.sevencdn.com/css2?family=Barlow&family=Kanit&family=Quicksand:wght@500&family=ZCOOL+QingKe+HuangYou&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" />
-  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 页面找不到</title>
+    <link rel="stylesheet" href="/css/404.css">
+    <link rel="preload" href="/fonts/GlowSansSC-Wide-ExtraBold.otf" as="font" type="font/opentype" crossorigin>
 
+    <style>
+        @font-face {
+            font-family: 'GlowSansSC-Wide-ExtraBold';
+            src: url('/fonts/GlowSansSC-Wide-ExtraBold.otf') format('opentype');
+        }
+
+        /* 容器样式 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* min-height: 100vh; */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .title {
+            font-family: 'GlowSansSC-Wide-ExtraBold', sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* 媒体查询 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
 
-<body scroll="no">
-  <!-- about -->
-  <!-- <div class="about">
-    <a class="bg_links social portfolio" href="https://haiyongcsdn.gitee.io/" target="_blank">
-      <span class="icon"></span>
-    </a>
-    <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
-      <span class="icon"></span>
-    </a>
-    <a class="bg_links social linkedin" href="https://www.linkedin.com/in/wang-hao-666544204/" target="_blank">
-      <span class="icon"></span>
-    </a>
-    <a class="bg_links logo"></a>
-  </div> -->
-  <!-- end about -->
-
-  <nav style="font-size: 20px;">
-    <div class="menu">
-      <p class="website_name">
-        <a href="/">
-          <i style="font-size: 40px;" class="mdui-icon material-icons">home</i>
-        </a>
-      </p>
-      <div class="menu_links">
-        <a href="/book" class="link">二排教育出版社</a>
-        <a href="/game" class="link">二排游戏中心</a>
-        <a href="/book/game" class="link">二排音乐工作室</a>
-      </div>
-      <div class="menu_icon">
-        <span class="icon"></span>
-      </div>
-    </div>
-  </nav>
-
-  <section class="wrapper">
-
+<body>
     <div class="container">
-
-      <div id="scene" class="scene" data-hover-only="false">
-
-
-        <div class="circle" data-depth="1.2"></div>
-
-        <div class="one" data-depth="0.9">
-          <div class="content">
-            <span class="piece"></span>
-            <span class="piece"></span>
-            <span class="piece"></span>
-          </div>
-        </div>
-
-        <div class="two" data-depth="0.60">
-          <div class="content">
-            <span class="piece"></span>
-            <span class="piece"></span>
-            <span class="piece"></span>
-          </div>
-        </div>
-
-        <div class="three" data-depth="0.40">
-          <div class="content">
-            <span class="piece"></span>
-            <span class="piece"></span>
-            <span class="piece"></span>
-          </div>
-        </div>
-
-        <p style="font-family: 'ZCOOL QingKe HuangYou'" class="p404" data-depth="0.50">404</p>
-        <p style="font-family: 'ZCOOL QingKe HuangYou'" class="p404" data-depth="0.10">404</p>
-
-      </div>
-
-      <div class="text">
-        <article>
-          <p>哎呀，网页被老年痴呆的淑华弄丢啦~<br>检查网址是否输入有错误，或返回首页。</p>
-          <p style="font-family: 'Star-Rail-Neue'; font-size: 30px;">
-            Shuhua can not find the webpage!</p>
-          <a href="/" target="_self">
-            <button>返回首页
-            </button>
-          </a>
-        </article>
-      </div>
-
+        <img src="/images/404 NotFound.png" alt="404 Not Found" class="image">
+        <h1 class="title">哎呀！404 Not Found.
+        </h1>
+        <p class="message"><a href="https://space.bilibili.com/672328094">嘉然然</a>可愛いです</p>
+        <a href="/" class="button">返回首页</a>
     </div>
-  </section>
-  <script>var scene = document.getElementById('scene');
-    var parallax = new Parallax(scene);</script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
-  <script>
-    // 禁止滚动
-    function disableScroll() {
-      // 获取滚动位置
-      var scrollX = window.scrollX || window.pageXOffset;
-      var scrollY = window.scrollY || window.pageYOffset;
-      // 将页面滚动位置重置为初始位置
-      window.onscroll = function () {
-        window.scrollTo(scrollX, scrollY);
-      };
-    }
-
-    // 启用滚动
-    function enableScroll() {
-      window.onscroll = null;
-    }
-
-    // 禁止滑动
-    function disableTouch() {
-      document.addEventListener('touchmove', preventDefault, { passive: false });
-    }
-
-    // 启用滑动
-    function enableTouch() {
-      document.removeEventListener('touchmove', preventDefault);
-    }
-
-    // 阻止默认滑动行为
-    function preventDefault(e) {
-      e.preventDefault();
-    }
-
-    // 禁止滚动
-    disableScroll();
-    // 禁止滑动
-    disableTouch();
-
-    // 启用滚动
-    // enableScroll();
-    // 启用滑动
-    // enableTouch();
-
-  </script>
 </body>
 
 </html>
