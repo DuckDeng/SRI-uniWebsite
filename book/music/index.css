@@ -48,7 +48,7 @@ section {
 }
 
 #img1 {
-    background-image: url('https://bing.img.run/1920x1080.php');
+    background-image: url('https://api.chongss.com/api.php?category=bing');
 }
 
 #img2 {
