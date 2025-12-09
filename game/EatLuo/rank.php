@@ -51,31 +51,36 @@ if ($RankingType == 'all') {
   <meta item="description" content="EatKano" />
   <meta charset="utf-8" />
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.staticfile.net/twitter-bootstrap/5.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.net/twitter-bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.staticfile.net/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="./"><?php echo $i18n['navbar-brand']; ?></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link <?php echo $RankingType == 'day' ? "active" : ""; ?>" href="?type=day"><?php echo $i18n['daily-ranking']; ?></a>
+            <a class="nav-link <?php echo $RankingType == 'day' ? "active" : ""; ?>"
+              href="?type=day"><?php echo $i18n['daily-ranking']; ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo $RankingType == 'week' ? "active" : ""; ?>" href="?type=week"><?php echo $i18n['weekly-ranking']; ?></a>
+            <a class="nav-link <?php echo $RankingType == 'week' ? "active" : ""; ?>"
+              href="?type=week"><?php echo $i18n['weekly-ranking']; ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo $RankingType == 'month' ? "active" : ""; ?>" href="?type=month"><?php echo $i18n['monthly-ranking']; ?></a>
+            <a class="nav-link <?php echo $RankingType == 'month' ? "active" : ""; ?>"
+              href="?type=month"><?php echo $i18n['monthly-ranking']; ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo $RankingType == 'all' ? "active" : ""; ?>" href="?type=all"><?php echo $i18n['all-ranking']; ?></a>
+            <a class="nav-link <?php echo $RankingType == 'all' ? "active" : ""; ?>"
+              href="?type=all"><?php echo $i18n['all-ranking']; ?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/arcxingye/EatKano/"><?php echo $i18n['source-code']; ?></a>
@@ -112,7 +117,7 @@ if ($RankingType == 'all') {
       $data_sql = "SELECT * FROM " . $ranking . " " . $cond2;
       if ($data_stmt = $link->prepare($data_sql)) {
         if ($RankingType == "query") {
-          $queryname = '%'.$queryname.'%';
+          $queryname = '%' . $queryname . '%';
           $data_stmt->bind_param("s", $queryname);
         } else {
           $data_stmt->bind_param("ii", $offset, $num);
